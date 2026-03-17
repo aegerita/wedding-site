@@ -1,8 +1,6 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-
 ## Getting Started
 
-First, run the development server:
+Install dependencies and run the development server:
 
 ```bash
 npm run dev
@@ -16,21 +14,36 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Linting
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Lint the whole project:
 
-## Learn More
+```bash
+npm run lint
+```
 
-To learn more about Next.js, take a look at the following resources:
+Automatically apply lint fixes across the project:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run lint:fix
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Supabase Setup
 
-## Deploy on Vercel
+Copy `.env.template` to `.env.local` and set:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- `NEXT_PUBLIC_SUPABASE_URL`
+- `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_DEFAULT_KEY`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The app exposes:
+
+- `createServerSupabaseClient()` for server components and server actions
+- `createBrowserSupabaseClient()` for client components
+- `checkSupabaseConnection()` for a schema-agnostic connectivity check
+
+The homepage uses the connection check to confirm that the configured Supabase project is reachable.
+
+## Next Steps
+
+- Replace placeholder wedding content in `src/content/site.ts`
+- Use the Supabase helpers when wiring RSVP submissions or guest list reads
