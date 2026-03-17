@@ -4,7 +4,7 @@ export default function SchedulePage() {
   const { schedule } = siteContent;
 
   return (
-    <main className='min-h-screen bg-background px-6 py-20 text-foreground sm:pl-28'>
+    <main className='min-h-screen px-6 py-20 text-foreground sm:pl-28'>
       <div className='mx-auto flex max-w-4xl flex-col gap-10'>
         <section className='space-y-4'>
           <p className='text-sm uppercase tracking-[0.35em] text-muted-foreground'>
@@ -21,7 +21,7 @@ export default function SchedulePage() {
 
         <section className='grid gap-4 sm:grid-cols-2'>
           <article className='rounded-3xl border border-border bg-card p-8 shadow-sm'>
-            <p className='text-sm uppercase tracking-[0.25em] text-muted-foreground'>
+            <p className='text-xs uppercase tracking-[0.35em] text-primary/80'>
               Ceremony
             </p>
             <h2 className='mt-3 text-2xl font-semibold tracking-tight'>
@@ -34,7 +34,7 @@ export default function SchedulePage() {
           </article>
 
           <article className='rounded-3xl border border-border bg-card p-8 shadow-sm'>
-            <p className='text-sm uppercase tracking-[0.25em] text-muted-foreground'>
+            <p className='text-xs uppercase tracking-[0.35em] text-primary/80'>
               Reception
             </p>
             <h2 className='mt-3 text-2xl font-semibold tracking-tight'>
@@ -50,7 +50,7 @@ export default function SchedulePage() {
         <section className='rounded-3xl border border-border bg-card p-8 shadow-sm'>
           <div className='grid gap-8 sm:grid-cols-2'>
             <div>
-              <p className='text-sm uppercase tracking-[0.25em] text-muted-foreground'>
+              <p className='text-xs uppercase tracking-[0.35em] text-primary/80'>
                 Parking
               </p>
               <ul className='mt-4 space-y-3 text-sm leading-7 text-muted-foreground'>
@@ -63,7 +63,7 @@ export default function SchedulePage() {
             </div>
 
             <div>
-              <p className='text-sm uppercase tracking-[0.25em] text-muted-foreground'>
+              <p className='text-xs uppercase tracking-[0.35em] text-primary/80'>
                 Dress code
               </p>
               <p className='mt-4 rounded-2xl bg-muted px-4 py-3 text-sm leading-7 text-muted-foreground'>

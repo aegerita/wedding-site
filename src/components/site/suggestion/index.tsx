@@ -66,7 +66,7 @@ export function SuggestionForm() {
     <div>
       <div className='flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between'>
         <div className='space-y-2'>
-          <p className='text-sm uppercase tracking-[0.25em] text-muted-foreground'>
+          <p className='text-xs uppercase tracking-[0.35em] text-primary/80'>
             Feedback
           </p>
           <h2 className='text-2xl font-semibold tracking-tight'>

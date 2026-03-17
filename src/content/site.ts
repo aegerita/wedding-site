@@ -33,10 +33,27 @@ export const siteContent = {
     ],
   },
   photos: {
-    sharedAlbumUrl: 'https://drive.google.com/...',
+    eyebrow: 'Photo Highlights',
+    title: 'A few frames from our story',
+    description:
+      'Oct 2022 - May 2026',
+    sharedAlbumUrl: 'https://photos.app.goo.gl/7k6SWaLqjETzAff29',
     highlights: [
-      { src: '/images/couple-1.jpg', alt: 'Highlight 1' },
-      { src: '/images/couple-2.jpg', alt: 'Highlight 2' },
+      {
+        src: '/images/gallery-1.svg',
+        caption: 'Soft light',
+        description: 'Replace the placeholder files with real photos to make this feel finished.',
+      },
+      {
+        src: '/images/gallery-2.svg',
+        caption: 'City evenings',
+        description: 'Replace the placeholder files with real photos to make this feel finished.',
+      },
+      {
+        src: '/images/gallery-3.svg',
+        caption: 'Favourite moments',
+        description: 'Replace the placeholder files with real photos to make this feel finished.',
+      },
     ],
   },
   gifts: {

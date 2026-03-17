@@ -1,0 +1,22 @@
+<svg width="1200" height="1600" viewBox="0 0 1200 1600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="1600" fill="#EEF3F1"/>
+  <g filter="url(#blur0)">
+    <circle cx="924" cy="274" r="232" fill="#D6B9A5"/>
+    <circle cx="228" cy="712" r="246" fill="#A5C4C0"/>
+    <circle cx="820" cy="1220" r="306" fill="#C3D8E8"/>
+  </g>
+  <rect x="116" y="156" width="968" height="1288" rx="72" fill="#FCFAF7" fill-opacity="0.8" stroke="#FFFFFF" stroke-opacity="0.7" stroke-width="8"/>
+  <rect x="216" y="268" width="768" height="432" rx="54" fill="#D5E3E0"/>
+  <path d="M270 592C384 486 550 452 704 484C820 508 914 570 968 664" stroke="#6A8B86" stroke-width="18" stroke-linecap="round"/>
+  <path d="M252 976C400 872 600 846 780 904C886 938 970 1000 1012 1086" stroke="#D08C6C" stroke-width="20" stroke-linecap="round"/>
+  <circle cx="446" cy="1042" r="122" fill="#E9D2C1" fill-opacity="0.96"/>
+  <circle cx="770" cy="1064" r="158" fill="#A9C7D7" fill-opacity="0.92"/>
+  <path d="M318 1278C514 1188 708 1186 906 1298" stroke="#839E9A" stroke-width="18" stroke-linecap="round"/>
+  <defs>
+    <filter id="blur0" x="-96" y="-54" width="1380" height="1714" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="85" result="effect1_foregroundBlur"/>
+    </filter>
+  </defs>
+</svg>
