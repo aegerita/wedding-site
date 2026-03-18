@@ -1,49 +1,88 @@
+# Wedding Site
+
+A Next.js wedding website with a homepage, FAQ page, RSVP flow, photo gallery, and a suggestion box backed by Supabase.
+
+## Stack
+
+- Next.js 16
+- React 19
+- TypeScript
+- Tailwind CSS 4
+- Supabase
+
+## What This App Includes
+
+- `/` homepage with wedding details, schedule highlights, photo gallery links, and a suggestion form
+- `/rsvp` page with an RSVP form that submits to `/api/rsvp`
+- `/faq` page driven by shared site content
+- Centralized editable copy in `src/content/site.ts`
+- Supabase-backed API routes for RSVP and suggestion submissions
+
 ## Getting Started
 
-Install dependencies and run the development server:
+1. Install dependencies:
+
+```bash
+npm install
+```
+
+2. Copy the environment template:
+
+```bash
+cp .env.template .env.local
+```
+
+3. Set these variables in `.env.local`:
+
+- `NEXT_PUBLIC_SUPABASE_URL`
+- `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY`
+
+4. Start the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+5. Open [http://localhost:3000](http://localhost:3000).
 
-## Linting
-
-Lint the whole project:
+## Scripts
 
 ```bash
+npm run dev
+npm run build
+npm run start
 npm run lint
-```
-
-Automatically apply lint fixes across the project:
-
-```bash
 npm run lint:fix
 ```
 
-## Supabase Setup
+## Supabase
 
-Copy `.env.template` to `.env.local` and set:
+The app uses this helper:
 
-- `NEXT_PUBLIC_SUPABASE_URL`
-- `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_DEFAULT_KEY`
+- `createClient()` in `src/lib/supabase.ts`
 
-The app exposes:
+The API routes currently expect these tables:
 
-- `createServerSupabaseClient()` for server components and server actions
-- `createBrowserSupabaseClient()` for client components
-- `checkSupabaseConnection()` for a schema-agnostic connectivity check
+### `rsvps`
 
-The homepage uses the connection check to confirm that the configured Supabase project is reachable.
+Inserted by `src/app/api/rsvp/route.ts` with these columns:
 
-## Next Steps
+- `full_name`
+- `email`
+- `phone`
+- `attending_city_hall`
+- `attending_party`
+- `plus_one`
+- `plus_one_name`
+- `food_preference`
+- `allergies`
+- `dietary_notes`
+- `notes`
+- `volunteer`
 
-- Replace placeholder wedding content in `src/content/site.ts`
-- Use the Supabase helpers when wiring RSVP submissions or guest list reads
+### `suggestions`
+
+Inserted by `src/app/api/suggestions/route.ts` with these columns:
+
+- `name`
+- `message`
