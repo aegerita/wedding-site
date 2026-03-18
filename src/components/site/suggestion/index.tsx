@@ -3,6 +3,7 @@
 import { type FormEvent, useState } from 'react';
 
 import { Button } from '@/components/ui/button';
+import { ContentCard } from '@/components/ui/content-card';
 
 const initialFormValues = {
   name: '',
@@ -63,22 +64,12 @@ export function SuggestionForm() {
   }
 
   return (
-    <div>
-      <div className='flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between'>
-        <div className='space-y-2'>
-          <p className='text-xs uppercase tracking-[0.35em] text-primary/80'>
-            Feedback
-          </p>
-          <h2 className='text-2xl font-semibold tracking-tight'>
-            Suggestion Box
-          </h2>
-          <p className='text-sm leading-7 text-muted-foreground'>
-            If you have ideas to improve the website or our wedding plans,
-            we would love to hear from you.
-          </p>
-        </div>
-      </div>
-      <form className='mt-4 space-y-5' onSubmit={handleSubmit}>
+    <ContentCard
+      description='If you have ideas to improve the website or our wedding plans, we would love to hear from you.'
+      eyebrow='Feedback'
+      title='Suggestion Box'
+    >
+      <form className='space-y-4' onSubmit={handleSubmit}>
         <label className='block text-sm text-muted-foreground'>
           <textarea
             className={`${fieldClassName} min-h-36 resize-y`}
@@ -97,7 +88,7 @@ export function SuggestionForm() {
 
         <div className='flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between'>
           <label className='space-y-2 text-sm text-muted-foreground'>
-            <span className='font-medium text-foreground'>Name (Optional)</span>
+            <p className='font-medium text-foreground'>Name (Optional)</p>
             <input
               autoComplete='name'
               className={fieldClassName}
@@ -135,6 +126,6 @@ export function SuggestionForm() {
           {submitState?.message ?? ''}
         </p>
       </form>
-    </div>
+    </ContentCard>
   );
 }

@@ -41,7 +41,7 @@ export function PhotoGallery({
     <>
       <section className='relative py-4'>
         <div
-          className='pointer-events-none absolute inset-0'
+          className='pointer-events-none absolute inset-0 blur-3xl'
           style={{
             backgroundImage: [
               'linear-gradient(180deg, transparent,',

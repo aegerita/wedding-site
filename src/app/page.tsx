@@ -25,8 +25,8 @@ export default function Home() {
         <PhotoGallery {...photos} />
 
         <div className='px-6 sm:pl-28 sm:pr-6'>
-          <section className='mx-auto max-w-4xl rounded-3xl border border-border bg-card p-8 shadow-sm'>
-            <SuggestionForm />
+          <section className='mx-auto max-w-4xl'>
+            <SuggestionForm/>
           </section>
         </div>
       </div>

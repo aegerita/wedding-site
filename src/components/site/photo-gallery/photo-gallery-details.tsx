@@ -1,3 +1,4 @@
+import { ContentCard } from '@/components/ui/content-card';
 import type { PhotoAlbum } from '@/types';
 
 import { PhotoAlbumLinks } from './photo-album-links';
@@ -16,19 +17,14 @@ export function PhotoGalleryDetails({
   albums,
 }: PhotoGalleryDetailsProps) {
   return (
-    <div className='space-y-4'>
-      <p className='text-xs uppercase tracking-[0.35em] text-primary/80'>
-        {eyebrow}
-      </p>
-
-      <div className='space-y-3'>
-        <h2 className='max-w-md text-3xl font-semibold tracking-tight sm:text-4xl'>
-          {title}
-        </h2>
-        <p className='max-w-xl text-base leading-7 text-muted-foreground sm:text-lg'>
-          {description}
-        </p>
-      </div>
+    <div>
+      <ContentCard
+        eyebrow={eyebrow}
+        title={title}
+        description={description}
+        size='lg'
+        className='bg-transparent border-0 p-0 mb-8'
+      />
 
       <PhotoAlbumLinks albums={albums} />
     </div>

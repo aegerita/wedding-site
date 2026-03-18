@@ -1,3 +1,4 @@
+import { ContentCard } from '@/components/ui/content-card';
 import { content } from '@/content/site';
 
 export default function RsvpPage() {
@@ -18,7 +19,7 @@ export default function RsvpPage() {
           </p>
         </section>
 
-        <section className='rounded-3xl border border-border bg-card p-8 shadow-sm'>
+        <ContentCard>
           <div className='grid gap-4 text-sm leading-7 text-muted-foreground sm:grid-cols-2'>
             <div className='rounded-2xl bg-muted p-5'>
               <p className='font-medium text-foreground'>What guests should share</p>
@@ -36,7 +37,7 @@ export default function RsvpPage() {
               </p>
             </div>
           </div>
-        </section>
+        </ContentCard>
       </div>
     </main>
   );
