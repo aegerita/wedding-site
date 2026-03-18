@@ -6,7 +6,7 @@ export default function SchedulePage() {
 
   return (
     <main className='min-h-screen px-6 py-20 text-foreground sm:pl-28'>
-      <div className='mx-auto flex max-w-4xl flex-col gap-10'>
+      <div className='mx-auto flex max-w-5xl flex-col gap-10'>
         <section className='space-y-4'>
           <p className='text-sm uppercase tracking-[0.35em] text-muted-foreground'>
             Schedule

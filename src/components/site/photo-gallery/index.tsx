@@ -55,7 +55,7 @@ export function PhotoGallery({
         <div className='px-6 sm:pl-28 sm:pr-6'>
           <div
             className={cn(
-              'relative mx-auto grid max-w-4xl gap-10',
+              'relative mx-auto grid max-w-5xl gap-10',
               'lg:grid-cols-[minmax(18rem,0.7fr)_minmax(0,1.3fr)] lg:items-center',
             )}
           >

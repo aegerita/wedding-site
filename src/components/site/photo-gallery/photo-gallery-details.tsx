@@ -23,7 +23,7 @@ export function PhotoGalleryDetails({
         title={title}
         description={description}
         size='lg'
-        className='bg-transparent border-0 p-0 mb-8'
+        className='bg-transparent border-0 p-0 mb-8 shadow-none'
       />
 
       <PhotoAlbumLinks albums={albums} />

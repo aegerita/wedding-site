@@ -11,29 +11,65 @@ export const content = {
     date: 'May 1, 2026',
     location: 'Toronto, Ontario',
     intro: 'We’re excited to celebrate with you.',
+    link: {
+      weddingAlbum: {
+        url: 'https://photos.app.goo.gl/7k6SWaLqjETzAff29',
+        ctaLabel: 'Open album',
+      },
+      musicPlaylist: {
+        url: 'https://open.spotify.com/playlist/1KFTX8tNy9YlvqK4IbQkM5?si=6cae275b0f13489a&pt=ca18ef282c6df2577753071fe992d76a',
+        ctaLabel: 'Open playlist',
+      },
+    },
   },
   schedule: {
     ceremony: {
-      time: '2:00 PM',
+      time: '2:30 PM',
       venue: 'Toronto City Hall',
       address: '100 Queen St W, Toronto, ON',
     },
     reception: {
-      time: '6:00 PM',
-      venue: 'Reception Venue Name',
-      address: 'Reception address here',
+      time: '3:00 PM',
+      venue: 'Max and Eve\'s Party Room',
+      address: '116 George St, Toronto, ON',
     },
     parking: [
-      'Underground parking nearby',
-      'Street parking is limited',
+      'Contact us for parking at our place or friends\' visitor parking.',
     ],
-    dressCode: 'Cocktail / Semi-formal',
-    faq: [
+    dressCode: 'Business casual. Whatever you wear to work is perfect.',
+  },
+  faq: {
+    eyebrow: 'FAQ',
+    title: 'The details people usually ask us for',
+    intro:
+      'A few answers on timing, logistics, and what to expect on May 1, 2026. We’ll keep this updated as plans firm up.',
+    items: [
+      {
+        q: 'What time should I arrive?',
+        a: 'Please plan to arrive 15 to 20 minutes before the 2:00 PM ceremony so everyone can get settled before things begin.',
+      },
       {
         q: 'Can I bring a plus one?',
-        a: 'Please indicate in the RSVP form.',
+        a: 'If your invitation includes a guest, add them in your RSVP. If you are unsure, check with us before submitting.',
+      },
+      {
+        q: 'Where should I park?',
+        a: 'There is underground parking nearby, but street parking is limited. Give yourself a few extra minutes in case the closest lot is full.',
+      },
+      {
+        q: 'What should I wear?',
+        a: 'Cocktail / semi-formal is perfect for both the ceremony and reception.',
+      },
+      {
+        q: 'Will there be a shared photo album?',
+        a: 'Yes. We have a shared wedding album linked on the home page, and we would love your candid photos from the day.',
+      },
+      {
+        q: 'How do I update my plans later?',
+        a: 'Use the RSVP flow once it is live, or reach out to us directly if you need to change attendance, meal preferences, or accessibility details.',
       },
     ],
+    note: 'Website is UP and RUNNING! Don\'t forget to RSVP!',
   },
   photos: {
     eyebrow: 'Photo Highlights',

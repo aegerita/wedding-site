@@ -1,6 +1,6 @@
 'use client';
 
-import { CalendarDays, ClipboardList, House, Flashlight, FlashlightOff } from 'lucide-react';
+import { CalendarDays, CircleHelp, ClipboardList, House, Flashlight, FlashlightOff } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect } from 'react';
@@ -22,6 +22,11 @@ const navItems = [
     href: '/schedule',
     label: 'Schedule',
     icon: CalendarDays,
+  },
+  {
+    href: '/faq',
+    label: 'FAQ',
+    icon: CircleHelp,
   },
 ];
 
