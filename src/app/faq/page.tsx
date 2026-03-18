@@ -1,4 +1,4 @@
-import { ContentCard } from '@/components/ui/content-card';
+import { Card } from '@/components/ui/card';
 import { content } from '@/content/site';
 
 export default function FaqPage() {
@@ -21,7 +21,7 @@ export default function FaqPage() {
 
         <section className='grid gap-4 md:grid-cols-2'>
           {faq.items.map((item, index) => (
-            <ContentCard
+            <Card
               key={item.q}
               as='article'
               size='sm'

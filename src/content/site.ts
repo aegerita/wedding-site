@@ -29,14 +29,14 @@ export const content = {
       address: '100 Queen St W, Toronto, ON',
     },
     reception: {
-      time: '3:00 PM',
-      venue: 'Max and Eve\'s Party Room',
+      time: 'Starts 3:00 PM until late',
+      venue: '9th Floor Party Room',
       address: '116 George St, Toronto, ON',
     },
     parking: [
-      'Contact us for parking at our place or friends\' visitor parking.',
+      'Contact us for parking at our place or friends\' visitor parking',
     ],
-    dressCode: 'Business casual. Whatever you wear to work is perfect.',
+    dressCode: 'Business casual',
   },
   faq: {
     eyebrow: 'FAQ',
@@ -45,28 +45,36 @@ export const content = {
       'A few answers on timing, logistics, and what to expect on May 1, 2026. We’ll keep this updated as plans firm up.',
     items: [
       {
-        q: 'What time should I arrive?',
-        a: 'Please plan to arrive 15 to 20 minutes before the 2:00 PM ceremony so everyone can get settled before things begin.',
+        q: 'What time should I arrive for the ceremony?',
+        a: 'For the ceremony, please plan to arrive 15 to 20 minutes early so we can get settled before things begin.',
+      },
+      {
+        q: 'What time should I arrive for the reception?',
+        a: 'The reception informally starts at 3:00 PM, but feel free to come by whenever you can. We will be there to greet you!',
+      },
+      {
+        q: 'Do I need to attend?',
+        a: 'We would love to see you there, but we understand if you can\'t make it. Please RSVP with your plans so we can have an accurate headcount.',
       },
       {
         q: 'Can I bring a plus one?',
         a: 'If your invitation includes a guest, add them in your RSVP. If you are unsure, check with us before submitting.',
       },
       {
+        q: 'Is there a gift registry?',
+        a: 'We are not doing a traditional registry, and we do not expect gifts, but if you would like to contribute, you can e-transfer us at jennytai3221@gmail.com, or give us a red envelope :)',
+      },
+      {
         q: 'Where should I park?',
-        a: 'There is underground parking nearby, but street parking is limited. Give yourself a few extra minutes in case the closest lot is full.',
+        a: 'Contact us for parking at our place or friends\' visitor parking. We can share more details on parking and transit options.',
       },
       {
         q: 'What should I wear?',
-        a: 'Cocktail / semi-formal is perfect for both the ceremony and reception.',
-      },
-      {
-        q: 'Will there be a shared photo album?',
-        a: 'Yes. We have a shared wedding album linked on the home page, and we would love your candid photos from the day.',
+        a: 'Business casual is perfect for both the ceremony and reception.',
       },
       {
         q: 'How do I update my plans later?',
-        a: 'Use the RSVP flow once it is live, or reach out to us directly if you need to change attendance, meal preferences, or accessibility details.',
+        a: 'Use the RSVP form once it is live, or reach out to us directly if you need to change attendance, meal preferences, or accessibility details.',
       },
     ],
     note: 'Website is UP and RUNNING! Don\'t forget to RSVP!',

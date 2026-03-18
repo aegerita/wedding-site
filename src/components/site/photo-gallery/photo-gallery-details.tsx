@@ -1,4 +1,4 @@
-import { ContentCard } from '@/components/ui/content-card';
+import { Card } from '@/components/ui/card';
 import type { PhotoAlbum } from '@/types';
 
 import { PhotoAlbumLinks } from './photo-album-links';
@@ -18,7 +18,7 @@ export function PhotoGalleryDetails({
 }: PhotoGalleryDetailsProps) {
   return (
     <div>
-      <ContentCard
+      <Card
         eyebrow={eyebrow}
         title={title}
         description={description}

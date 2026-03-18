@@ -3,15 +3,15 @@
 import { type FormEvent, useState } from 'react';
 
 import { Button } from '@/components/ui/button';
-import { ContentCard } from '@/components/ui/content-card';
+import { Card } from '@/components/ui/card';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
+import { Textarea } from '@/components/ui/textarea';
 
 const initialFormValues = {
   name: '',
   message: '',
 };
-
-const fieldClassName =
-  'w-full rounded-2xl border border-input bg-background px-4 py-3 text-base text-foreground placeholder:text-muted-foreground focus:border-ring focus:outline-none';
 
 type SubmitState =
   | { tone: 'success'; message: string }
@@ -64,15 +64,17 @@ export function SuggestionForm() {
   }
 
   return (
-    <ContentCard
+    <Card
       description='If you have ideas to improve the website or our wedding plans, we would love to hear from you.'
       eyebrow='Feedback'
       title='Suggestion Box'
     >
       <form className='space-y-4' onSubmit={handleSubmit}>
-        <label className='block text-sm text-muted-foreground'>
-          <textarea
-            className={`${fieldClassName} min-h-36 resize-y`}
+        <div className='space-y-2'>
+          <Label htmlFor='suggestion-message'>Message</Label>
+          <Textarea
+            className='min-h-36 resize-y'
+            id='suggestion-message'
             name='message'
             onChange={(event) =>
               setFormValues((currentValues) => ({
@@ -84,14 +86,14 @@ export function SuggestionForm() {
             required
             value={formValues.message}
           />
-        </label>
+        </div>
 
         <div className='flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between'>
-          <label className='space-y-2 text-sm text-muted-foreground'>
-            <p className='font-medium text-foreground'>Name (Optional)</p>
-            <input
+          <div className='space-y-2'>
+            <Label htmlFor='suggestion-name'>Name (Optional)</Label>
+            <Input
               autoComplete='name'
-              className={fieldClassName}
+              id='suggestion-name'
               name='name'
               onChange={(event) =>
                 setFormValues((currentValues) => ({
@@ -103,7 +105,7 @@ export function SuggestionForm() {
               type='text'
               value={formValues.name}
             />
-          </label>
+          </div>
 
           <Button
             className='h-11 rounded-full px-6'
@@ -126,6 +128,6 @@ export function SuggestionForm() {
           {submitState?.message ?? ''}
         </p>
       </form>
-    </ContentCard>
+    </Card>
   );
 }

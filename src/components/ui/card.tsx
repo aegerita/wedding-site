@@ -2,7 +2,7 @@ import { type ReactNode } from 'react';
 
 import { cn } from '@/lib/utils';
 
-type ContentCardProps = {
+type CardProps = {
   as?: 'article' | 'div' | 'section';
   size?: 'sm' | 'md' | 'lg';
   eyebrow?: ReactNode;
@@ -19,7 +19,7 @@ type ContentCardProps = {
   descriptionClassName?: string;
 };
 
-export function ContentCard({
+export function Card({
   as: Component = 'section',
   size = 'md',
   eyebrow,
@@ -34,7 +34,7 @@ export function ContentCard({
   titleClassName,
   subtitleClassName,
   descriptionClassName,
-}: ContentCardProps) {
+}: CardProps) {
   const hasHeader = eyebrow || title || subtitle || description;
 
   return (

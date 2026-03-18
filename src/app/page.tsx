@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 import { PhotoGallery } from '@/components/site/photo-gallery';
 import { SuggestionForm } from '@/components/site/suggestion';
-import { ContentCard } from '@/components/ui/content-card';
+import { Card } from '@/components/ui/card';
 import { content } from '@/content/site';
 
 export default function Home() {
@@ -26,7 +26,7 @@ export default function Home() {
         <div className='px-6 sm:pl-28 sm:pr-6'>
           <div className='mx-auto flex max-w-5xl flex-col gap-10'>
             <section className='grid gap-4 lg:grid-cols-[1.15fr_0.85fr]'>
-              <ContentCard
+              <Card
                 eyebrow='Quick facts'
                 title='The essentials'
                 description='The key logistics at a glance if you just need the short version.'
@@ -57,9 +57,9 @@ export default function Home() {
                     <p className='mt-2'>{schedule.dressCode}</p>
                   </div>
                 </div>
-              </ContentCard>
+              </Card>
 
-              <ContentCard eyebrow='Updates' title='Keep an eye here'>
+              <Card eyebrow='Updates' title='Keep an eye here'>
                 <div className='space-y-4 text-sm leading-7 text-muted-foreground'>
                   <p>{faq.note}</p>
                   <p>
@@ -82,7 +82,7 @@ export default function Home() {
                     {home.link.musicPlaylist.ctaLabel}
                   </Link>
                 </div>
-              </ContentCard>
+              </Card>
             </section>
 
             <SuggestionForm />

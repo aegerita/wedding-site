@@ -1,4 +1,4 @@
-import { ContentCard } from '@/components/ui/content-card';
+import { RsvpForm } from '@/components/site/rsvp-form';
 import { content } from '@/content/site';
 
 export default function RsvpPage() {
@@ -19,25 +19,9 @@ export default function RsvpPage() {
           </p>
         </section>
 
-        <ContentCard>
-          <div className='grid gap-4 text-sm leading-7 text-muted-foreground sm:grid-cols-2'>
-            <div className='rounded-2xl bg-muted p-5'>
-              <p className='font-medium text-foreground'>What guests should share</p>
-              <p className='mt-2'>
-                Attendance, meal preferences, plus-one details, and any
-                accessibility needs.
-              </p>
-            </div>
-
-            <div className='rounded-2xl bg-muted p-5'>
-              <p className='font-medium text-foreground'>Suggested next step</p>
-              <p className='mt-2'>
-                Replace this placeholder with your real RSVP flow or linked form
-                when you are ready.
-              </p>
-            </div>
-          </div>
-        </ContentCard>
+        <section>
+          <RsvpForm />
+        </section>
       </div>
     </main>
   );

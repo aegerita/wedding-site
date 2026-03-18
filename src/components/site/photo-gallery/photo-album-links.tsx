@@ -1,7 +1,7 @@
 import { ArrowUpRight } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
-import { ContentCard } from '@/components/ui/content-card';
+import { Card } from '@/components/ui/card';
 import type { PhotoAlbum } from '@/types';
 
 type PhotoAlbumLinksProps = {
@@ -17,14 +17,14 @@ export function PhotoAlbumLinks({ albums }: PhotoAlbumLinksProps) {
   return (
     <div className='grid gap-4'>
       {albums.map((album) => (
-        <ContentCard title={album.title} description={album.description} size='sm' key={album.url}>
-          <Button asChild variant='outline' size='sm'>
+        <Card title={album.title} description={album.description} size='sm' key={album.url}>
+          <Button asChild variant='outline'>
             <a href={album.url} target='_blank' rel='noreferrer'>
               {album.ctaLabel}
               <ArrowUpRight className='size-4' />
             </a>
           </Button>
-        </ContentCard>
+        </Card>
       ))}
     </div>
   );
