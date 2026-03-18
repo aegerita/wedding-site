@@ -1,11 +1,11 @@
 import { SidebarNav } from '@/components/site/sidebar';
-import { siteContent } from '@/content/site';
+import { content } from '@/content/site';
 
 import type { Metadata } from 'next';
 
 import './globals.css';
 
-export const metadata: Metadata = siteContent.metadata;
+export const metadata: Metadata = content.metadata;
 
 export default function RootLayout({
   children,

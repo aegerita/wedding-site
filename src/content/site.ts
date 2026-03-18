@@ -1,7 +1,10 @@
-export const siteContent = {
+import { Photo, PhotoAlbum } from '@/types';
+
+export const content = {
   metadata: {
     title: 'Adam & Jenny',
     description: 'Wedding reception details and RSVP information.',
+    repoUrl: 'https://github.com/aegerita/wedding-site',
   },
   home: {
     title: 'Adam & Jenny',
@@ -37,24 +40,37 @@ export const siteContent = {
     title: 'A few frames from our story',
     description:
       'Oct 2022 - May 2026',
-    sharedAlbumUrl: 'https://photos.app.goo.gl/7k6SWaLqjETzAff29',
+    albums: [
+      {
+        title: 'Current Photo Album',
+        description: 'Our full running album of photos together, beyond the small set featured on the homepage.',
+        url: 'https://photos.app.goo.gl/NsxzyHxXVBjYk8986',
+        ctaLabel: 'View current album',
+      },
+      {
+        title: 'Wedding Photo Album',
+        description: 'The shared wedding album for guest uploads and everyone’s pictures from the celebration.',
+        url: 'https://photos.app.goo.gl/7k6SWaLqjETzAff29',
+        ctaLabel: 'Open wedding album',
+      },
+    ] satisfies PhotoAlbum[],
     highlights: [
       {
-        src: '/images/gallery-1.svg',
-        caption: 'Soft light',
-        description: 'Replace the placeholder files with real photos to make this feel finished.',
+        src: '/images/SEHI0540.JPG',
+        caption: 'Dancing at consin\'s wedding',
+        description: 'Got drunk and danced at weddings. Will probably be drunk at ours as well :)',
       },
       {
-        src: '/images/gallery-2.svg',
-        caption: 'City evenings',
-        description: 'Replace the placeholder files with real photos to make this feel finished.',
+        src: '/images/PXL_20240612_211311317.jpg',
+        caption: 'Adam\'s graduation',
+        description: 'Celebrated together with friends and family',
       },
       {
-        src: '/images/gallery-3.svg',
-        caption: 'Favourite moments',
-        description: 'Replace the placeholder files with real photos to make this feel finished.',
+        src: '/images/IMG_8320.JPG',
+        caption: 'Shanghai trip',
+        description: 'A fun trip to Shanghai with visiting Jenny\'s family in 2024',
       },
-    ],
+    ] satisfies Photo[],
   },
   gifts: {
     etransferEmail: 'your@email.com',

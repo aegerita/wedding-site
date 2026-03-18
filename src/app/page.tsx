@@ -1,9 +1,9 @@
 import { PhotoGallery } from '@/components/site/photo-gallery';
 import { SuggestionForm } from '@/components/site/suggestion';
-import { siteContent } from '@/content/site';
+import { content } from '@/content/site';
 
 export default function Home() {
-  const { home, photos } = siteContent;
+  const { home, photos } = content;
 
   return (
     <main className='relative min-h-screen overflow-hidden py-20 text-foreground'>

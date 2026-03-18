@@ -1,7 +1,7 @@
-import { siteContent } from '@/content/site';
+import { content } from '@/content/site';
 
 export default function RsvpPage() {
-  const { home } = siteContent;
+  const { home } = content;
 
   return (
     <main className='min-h-screen px-6 py-20 text-foreground sm:pl-28'>
