@@ -36,6 +36,9 @@ cp .env.template .env.local
 
 - `NEXT_PUBLIC_SUPABASE_URL`
 - `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY`
+- `RESEND_API_KEY`
+- `RSVP_NOTIFICATION_FROM_EMAIL`
+- `RSVP_NOTIFICATION_EMAIL`
 
 4. Start the development server:
 
@@ -86,3 +89,13 @@ Inserted by `src/app/api/suggestions/route.ts` with these columns:
 
 - `name`
 - `message`
+
+## RSVP Email Notifications
+
+RSVP submissions now also trigger an email notification from `src/lib/rsvp-notification.ts`.
+
+- `RESEND_API_KEY`: your Resend API key
+- `RSVP_NOTIFICATION_FROM_EMAIL`: the verified sender used by Resend, for example `Wedding RSVP <rsvp@yourdomain.com>`
+- `RSVP_NOTIFICATION_EMAIL`: Adam's email address, or any inbox that should receive RSVP copies
+
+If those variables are missing, the RSVP still saves to Supabase, but the notification email is skipped.

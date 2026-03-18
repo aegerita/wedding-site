@@ -15,6 +15,8 @@ export const rsvpSchema = z.object({
   volunteerJson: z.string().optional(),
 });
 
+export type RsvpPayload = z.infer<typeof rsvpSchema>;
+
 const optionalSuggestionField = z
   .string()
   .trim()

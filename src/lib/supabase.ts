@@ -29,7 +29,6 @@ export function getSupabaseConfig(): SupabaseConfig {
   return { url, publishableKey };
 }
 
-
 export const createClient = (cookieStore: Awaited<ReturnType<typeof cookies>>) => {
   const { url, publishableKey } = getSupabaseConfig();
   return createServerClient(

@@ -278,8 +278,8 @@ export function RsvpForm() {
           </label>
         </div>
         <p className='mt-4 text-destructive text-sm'>
-          We have a very limited number of spots for the City Hall ceremony. After RSVP process is closed,
-          we will reach out to those who can partake in the ceremony.
+          We have a very limited number of spots for the City Hall ceremony.
+          After RSVP process is closed, we will reach out to those who can partake in the ceremony.
         </p>
       </section>
 

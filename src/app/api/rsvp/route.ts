@@ -1,6 +1,7 @@
 import { cookies } from 'next/headers';
 import { NextResponse } from 'next/server';
 
+import { sendRsvpNotificationEmail } from '@/lib/email';
 import { createClient } from '@/lib/supabase';
 import { rsvpSchema } from '@/lib/validation';
 
@@ -117,7 +118,16 @@ export async function POST(request: Request) {
       );
     }
 
-    return NextResponse.json({ ok: true }, { status: 201 });
+    let notificationSent = true;
+
+    try {
+      await sendRsvpNotificationEmail(parsedPayload.data);
+    } catch (notificationError) {
+      notificationSent = false;
+      console.error('Failed to send RSVP notification email:', notificationError);
+    }
+
+    return NextResponse.json({ ok: true, notificationSent }, { status: 201 });
   } catch (error) {
     console.error('Failed to save RSVP:', error);
 
