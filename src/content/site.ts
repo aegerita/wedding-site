@@ -101,12 +101,12 @@ export const content = {
     highlights: [
       {
         src: '/images/SEHI0540.JPG',
-        caption: 'Dancing at consin\'s wedding',
-        description: 'Got drunk and danced at weddings. Will probably be drunk at ours as well :)',
+        caption: 'Dancing',
+        description: 'Got drunk and danced at my cousin \'s weddings. Will probably be drunk at ours as well :)',
       },
       {
         src: '/images/PXL_20240612_211311317.jpg',
-        caption: 'Adam\'s graduation',
+        caption: 'Graduation',
         description: 'Celebrated together with friends and family',
       },
       {
