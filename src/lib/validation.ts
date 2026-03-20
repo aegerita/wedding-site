@@ -1,5 +1,29 @@
 import { z } from 'zod';
 
+const optionalTrimmedStringField = z
+  .string()
+  .trim()
+  .min(1)
+  .optional();
+
+const trimmedStringArrayField = z.array(z.string().trim()).default([]).transform((values) =>
+  values.filter((value) => value.length > 0),
+);
+
+export const foodPreferenceSchema = z.object({
+  preferences: trimmedStringArrayField,
+  other: optionalTrimmedStringField,
+});
+
+export type FoodPreferencePayload = z.infer<typeof foodPreferenceSchema>;
+
+export const volunteerSchema = z.object({
+  interests: trimmedStringArrayField,
+  details: optionalTrimmedStringField,
+});
+
+export type VolunteerPayload = z.infer<typeof volunteerSchema>;
+
 export const rsvpSchema = z.object({
   fullName: z.string().min(1),
   email: z.email(),
@@ -8,11 +32,11 @@ export const rsvpSchema = z.object({
   attendingParty: z.boolean(),
   plusOne: z.boolean(),
   plusOneName: z.string().optional(),
-  foodPreferenceJson: z.string().optional(),
+  foodPreference: foodPreferenceSchema.optional(),
   allergies: z.string().optional(),
   dietaryNotes: z.string().optional(),
   notes: z.string().optional(),
-  volunteerJson: z.string().optional(),
+  volunteer: volunteerSchema.optional(),
 });
 
 export type RsvpPayload = z.infer<typeof rsvpSchema>;

@@ -77,11 +77,11 @@ Inserted by `src/app/api/rsvp/route.ts` with these columns:
 - `attending_party`
 - `plus_one`
 - `plus_one_name`
-- `food_preference`
+- `food_preference` (`jsonb`)
 - `allergies`
 - `dietary_notes`
 - `notes`
-- `volunteer`
+- `volunteer` (`jsonb`)
 
 ### `suggestions`
 

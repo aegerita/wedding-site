@@ -1,18 +1,12 @@
 import 'server-only';
 
-import type { RsvpPayload } from '@/lib/validation';
+import type {
+  FoodPreferencePayload,
+  RsvpPayload,
+  VolunteerPayload,
+} from '@/lib/validation';
 
 const RESEND_API_URL = 'https://api.resend.com/emails';
-
-type FoodPreferenceDetails = {
-  preferences: string[];
-  other?: string;
-};
-
-type VolunteerDetails = {
-  interests: string[];
-  details?: string;
-};
 
 function getOptionalEnv(name: string) {
   const value = process.env[name]?.trim();
@@ -36,58 +30,22 @@ function getNotificationConfig() {
   return { resendApiKey, from, to };
 }
 
-function parseFoodPreferenceJson(foodPreferenceJson?: string): FoodPreferenceDetails {
-  if (!foodPreferenceJson) {
+function getFoodPreferenceDetails(
+  foodPreference?: FoodPreferencePayload,
+): FoodPreferencePayload {
+  if (!foodPreference) {
     return { preferences: [] };
   }
 
-  try {
-    const parsedValue = JSON.parse(foodPreferenceJson) as {
-      preferences?: unknown;
-      other?: unknown;
-    };
-
-    return {
-      preferences: Array.isArray(parsedValue.preferences)
-        ? parsedValue.preferences.filter(
-            (value): value is string => typeof value === 'string' && value.trim().length > 0,
-          )
-        : [],
-      other:
-        typeof parsedValue.other === 'string' && parsedValue.other.trim().length > 0
-          ? parsedValue.other.trim()
-          : undefined,
-    };
-  } catch {
-    return { preferences: [] };
-  }
+  return foodPreference;
 }
 
-function parseVolunteerJson(volunteerJson?: string): VolunteerDetails {
-  if (!volunteerJson) {
+function getVolunteerDetails(volunteer?: VolunteerPayload): VolunteerPayload {
+  if (!volunteer) {
     return { interests: [] };
   }
 
-  try {
-    const parsedValue = JSON.parse(volunteerJson) as {
-      interests?: unknown;
-      details?: unknown;
-    };
-
-    return {
-      interests: Array.isArray(parsedValue.interests)
-        ? parsedValue.interests.filter(
-            (value): value is string => typeof value === 'string' && value.trim().length > 0,
-          )
-        : [],
-      details:
-        typeof parsedValue.details === 'string' && parsedValue.details.trim().length > 0
-          ? parsedValue.details.trim()
-          : undefined,
-    };
-  } catch {
-    return { interests: [] };
-  }
+  return volunteer;
 }
 
 function formatBoolean(value: boolean) {
@@ -99,8 +57,8 @@ function formatOptionalValue(value?: string) {
 }
 
 function buildRsvpNotificationText(payload: RsvpPayload) {
-  const foodPreferences = parseFoodPreferenceJson(payload.foodPreferenceJson);
-  const volunteerDetails = parseVolunteerJson(payload.volunteerJson);
+  const foodPreferences = getFoodPreferenceDetails(payload.foodPreference);
+  const volunteerDetails = getVolunteerDetails(payload.volunteer);
 
   return [
     'New RSVP submission',

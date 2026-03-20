@@ -53,30 +53,30 @@ type SubmitState = { tone: 'success'; message: string } | { tone: 'error'; messa
 
 type RsvpFormValues = typeof initialFormValues;
 
-function buildVolunteerJson(values: RsvpFormValues) {
+function buildVolunteerPayload(values: RsvpFormValues) {
   const details = values.volunteerDetails.trim();
 
   if (values.volunteerInterests.length === 0 && details.length === 0) {
     return undefined;
   }
 
-  return JSON.stringify({
+  return {
     interests: values.volunteerInterests,
-    details: details.length > 0 ? details : undefined,
-  });
+    ...(details.length > 0 ? { details } : {}),
+  };
 }
 
-function buildFoodPreferenceJson(values: RsvpFormValues) {
+function buildFoodPreferencePayload(values: RsvpFormValues) {
   const other = values.foodPreferenceOther.trim();
 
   if (values.foodPreferences.length === 0 && other.length === 0) {
     return undefined;
   }
 
-  return JSON.stringify({
+  return {
     preferences: values.foodPreferences,
-    other: other.length > 0 ? other : undefined,
-  });
+    ...(other.length > 0 ? { other } : {}),
+  };
 }
 
 export function RsvpForm() {
@@ -137,10 +137,10 @@ export function RsvpForm() {
           attendingParty: formValues.attendingParty,
           plusOne: formValues.plusOne,
           plusOneName: formValues.plusOneName,
-          foodPreferenceJson: buildFoodPreferenceJson(formValues),
+          foodPreference: buildFoodPreferencePayload(formValues),
           allergies: formValues.allergies,
           notes: formValues.notes,
-          volunteerJson: buildVolunteerJson(formValues),
+          volunteer: buildVolunteerPayload(formValues),
         }),
       });
 
