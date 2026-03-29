@@ -12,6 +12,14 @@ export const content = {
     location: 'Toronto, Ontario',
     intro: 'We’re excited to celebrate with you.',
     link: {
+      discordServer: {
+        url: 'https://discord.gg/9f3xfM7V8g',
+        ctaLabel: 'Discord',
+      },
+      googleSheet: {
+        url: 'https://docs.google.com/spreadsheets/d/1VTRhLinp8E85dqlKdhBxpwtXPCTmSpD3Um4Qfsa12Tg/edit?usp=sharing',
+        ctaLabel: 'Potluck sheet',
+      },
       weddingAlbum: {
         url: 'https://photos.app.goo.gl/7k6SWaLqjETzAff29',
         ctaLabel: 'Open album',
@@ -77,7 +85,6 @@ export const content = {
         a: 'Use the RSVP form once it is live, or reach out to us directly if you need to change attendance, meal preferences, or accessibility details.',
       },
     ],
-    note: 'Website is UP and RUNNING! Don\'t forget to RSVP!',
   },
   photos: {
     eyebrow: 'Photo Highlights',

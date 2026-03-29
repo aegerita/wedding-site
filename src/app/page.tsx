@@ -7,6 +7,12 @@ import { content } from '@/content/site';
 
 export default function Home() {
   const { faq, home, schedule, photos } = content;
+  const updateLinks = [
+    home.link.discordServer,
+    home.link.googleSheet,
+    home.link.weddingAlbum,
+    home.link.musicPlaylist,
+  ];
 
   return (
     <main className='relative min-h-screen overflow-hidden py-20 text-foreground'>
@@ -61,26 +67,26 @@ export default function Home() {
 
               <Card eyebrow='Updates' title='Keep an eye here'>
                 <div className='space-y-4 text-sm leading-7 text-muted-foreground'>
-                  <p>{faq.note}</p>
                   <p>
-                    We have google photo album and spotify playlist here for open contributions:
+                    There were a lot of interests in bringing food and drinks to share, so we set up a potluck sheet to coordinate. If you’re interested in contributing, please add what you plan to bring to the sheet.
                   </p>
-                  <Link
-                    href={home.link.weddingAlbum.url}
-                    target='_blank'
-                    rel='noreferrer'
-                    className='inline-flex rounded-full border border-border bg-background px-4 py-2 text-sm font-medium text-foreground transition hover:bg-muted'
-                  >
-                    {home.link.weddingAlbum.ctaLabel}
-                  </Link>
-                  <Link
-                    href={home.link.musicPlaylist.url}
-                    target='_blank'
-                    rel='noreferrer'
-                    className='inline-flex rounded-full border border-border bg-background px-4 py-2 text-sm font-medium text-foreground transition hover:bg-muted'
-                  >
-                    {home.link.musicPlaylist.ctaLabel}
-                  </Link>
+                  <p>
+                    New links are live: join the Discord, add to the potluck sheet, and keep
+                    dropping songs and photos into the shared playlist and album.
+                  </p>
+                  <div className='flex flex-wrap gap-3'>
+                    {updateLinks.map((link) => (
+                      <Link
+                        key={link.url}
+                        href={link.url}
+                        target='_blank'
+                        rel='noreferrer'
+                        className='inline-flex rounded-full border border-border bg-background px-4 py-2 text-sm font-medium text-foreground transition hover:bg-muted'
+                      >
+                        {link.ctaLabel}
+                      </Link>
+                    ))}
+                  </div>
                 </div>
               </Card>
             </section>
