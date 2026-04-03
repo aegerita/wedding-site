@@ -6,7 +6,7 @@ import { Card } from '@/components/ui/card';
 import { content } from '@/content/site';
 
 export default function Home() {
-  const { faq, home, schedule, photos } = content;
+  const { home, schedule, photos } = content;
   const updateLinks = [
     home.link.discordServer,
     home.link.googleSheet,
@@ -68,7 +68,9 @@ export default function Home() {
               <Card eyebrow='Updates' title='Keep an eye here'>
                 <div className='space-y-4 text-sm leading-7 text-muted-foreground'>
                   <p>
-                    There were a lot of interests in bringing food and drinks to share, so we set up a potluck sheet to coordinate. If you’re interested in contributing, please add what you plan to bring to the sheet.
+                    There were a lot of interests in bringing food and drinks to share, so we
+                    set up a potluck sheet to coordinate. If you’re interested in contributing,
+                    please add what you plan to bring to the sheet.
                   </p>
                   <p>
                     New links are live: join the Discord, add to the potluck sheet, and keep

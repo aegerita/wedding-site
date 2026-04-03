@@ -48,6 +48,7 @@ const initialFormValues = {
 
 const selectionCardClassName =
   'rounded-2xl border border-border bg-background/70 p-4 transition hover:border-primary/40 hover:bg-muted/60';
+const cityHallCeremonyClosed = true;
 
 type SubmitState = { tone: 'success'; message: string } | { tone: 'error'; message: string } | null;
 
@@ -231,13 +232,19 @@ export function RsvpForm() {
           <label
             htmlFor='rsvp-attending-city-hall'
             className={cn(
-              `${selectionCardClassName} block cursor-pointer`,
-              formValues.attendingCityHall && 'border-primary/60 bg-muted',
+              `${selectionCardClassName} block`,
+              cityHallCeremonyClosed
+                ? 'pointer-events-none cursor-not-allowed opacity-60'
+                : 'cursor-pointer',
+              formValues.attendingCityHall &&
+                !cityHallCeremonyClosed &&
+                'border-primary/60 bg-muted',
             )}
           >
             <div className='flex items-start gap-3'>
               <Checkbox
                 checked={formValues.attendingCityHall}
+                disabled={cityHallCeremonyClosed}
                 id='rsvp-attending-city-hall'
                 name='attendingCityHall'
                 onCheckedChange={(checked) => updateField('attendingCityHall', checked === true)}
@@ -248,7 +255,9 @@ export function RsvpForm() {
                 <p className='text-sm text-muted-foreground'>
                   {schedule.ceremony.time} · {schedule.ceremony.venue}
                 </p>
-                <span className='text-sm text-destructive'>Limited capacity</span>
+                <span className='text-sm text-destructive'>
+                  {cityHallCeremonyClosed ? 'At capacity' : 'Limited capacity'}
+                </span>
               </div>
             </div>
           </label>
@@ -278,8 +287,7 @@ export function RsvpForm() {
           </label>
         </div>
         <p className='mt-4 text-destructive text-sm'>
-          We have a very limited number of spots for the City Hall ceremony.
-          After RSVP process is closed, we will reach out to those who can partake in the ceremony.
+          City Hall ceremony is full and no longer available for RSVP.
         </p>
       </section>
 
