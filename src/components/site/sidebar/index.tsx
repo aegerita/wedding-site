@@ -1,17 +1,30 @@
 'use client';
 
-import { CircleHelp, ClipboardList, House, Flashlight, FlashlightOff } from 'lucide-react';
+import {
+  CalendarDays,
+  CircleHelp,
+  ClipboardList,
+  Flashlight,
+  FlashlightOff,
+  House,
+} from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect } from 'react';
 
 import { Button } from '@/components/ui/button';
+import { content } from '@/content/site';
 
 const navItems = [
   {
     href: '/',
     label: 'Home',
     icon: House,
+  },
+  {
+    href: content.schedule.link.url,
+    label: 'Schedule',
+    icon: CalendarDays,
   },
   {
     href: '/rsvp',

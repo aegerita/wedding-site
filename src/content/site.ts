@@ -1,4 +1,4 @@
-import { Photo, PhotoAlbum } from '@/types';
+import type { Photo, PhotoAlbum, ScheduleContent } from '@/types';
 
 export const content = {
   metadata: {
@@ -31,21 +31,204 @@ export const content = {
     },
   },
   schedule: {
+    eyebrow: 'Schedule',
+    title: 'Logistics for the big day',
+    intro: 'Here’s where to be, when to arrive, and what to expect for Thursday night and Friday.',
+    timezoneNote: 'All times are Toronto local time.',
+    link: {
+      url: '/schedule',
+      ctaLabel: 'Full schedule',
+    },
+    quickFacts: [
+      {
+        title: 'Thursday, April 30',
+        description: 'Board game night starts at 7:00 PM at Max and Eve’s apartment.',
+      },
+      {
+        title: 'Friday ceremony',
+        description: 'Ceremony guests should arrive at City Hall by 2:15 PM. The ceremony starts at 2:30 PM.',
+      },
+      {
+        title: 'Friday reception',
+        description: 'The reception starts around 3:30 PM. Please do not arrive before then.',
+      },
+      {
+        title: 'Need help?',
+        description: 'Use Discord if you cannot find the party room on Friday.',
+      },
+    ],
+    locations: {
+      cityHall: {
+        name: 'Toronto City Hall',
+        address: '100 Queen St. W., Toronto, ON M5H 2N2',
+        details: [
+          'Wedding Chambers, 3rd floor, East Tower.',
+          'Enter through the wooden doors north of the Toronto sign.',
+        ],
+      },
+      apartment: {
+        name: 'Max and Eve’s apartment',
+        address: '116 George St, Toronto, ON M5A 3S2, Unit N903',
+        details: [
+          'Buzz Max Odell or Evelyn Li on the intercom.',
+          'The apartment is just down the hall from the reception room.',
+        ],
+      },
+      reception: {
+        name: '9th Floor Party Room',
+        address: '116 George St, Toronto, ON M5A 3S2',
+        details: [
+          'The Thursday buzz-in instructions are only for the apartment.',
+          'For the reception, go to the party room on the 9th floor. Ask in Discord if you cannot find it.',
+        ],
+      },
+    },
+    days: [
+      {
+        date: 'Thursday, April 30, 2026',
+        title: 'Before the wedding',
+        items: [
+          {
+            time: '7:00 PM',
+            title: 'Board game night',
+            location: 'Max and Eve’s apartment, 116 George St, Toronto, ON M5A 3S2, Unit N903',
+            description:
+              'All guests are welcome to come by, hang out, and play some games with us before the wedding day.',
+            details: [
+              'Buzz Max Odell or Evelyn Li on the intercom.',
+              'The apartment is just down the hall from where the reception will be the next day.',
+            ],
+          },
+        ],
+      },
+      {
+        date: 'Friday, May 1, 2026',
+        title: 'Wedding day',
+        items: [
+          {
+            time: '2:15 PM',
+            title: 'Arrive at Toronto City Hall',
+            location: '100 Queen St. W., Toronto, ON M5H 2N2',
+            description:
+              'Please arrive by 2:15 PM so everyone can get settled before the ceremony starts.',
+            details: [
+              'The Wedding Chambers are on the 3rd floor in the East Tower.',
+              'Enter City Hall through the wooden doors north of the Toronto sign, walk past the security desk, and follow the signs to the Wedding Chamber elevators.',
+              'Use the East elevators. Elevators 1, 3, and 4 stop on the 3rd floor for the Wedding Chambers.',
+            ],
+          },
+          {
+            time: '2:30 PM',
+            title: 'Ceremony',
+            location: 'Wedding Chambers, 3rd floor, East Tower',
+            description:
+              'City Hall has a maximum attendance of 15 people for the ceremony. If you responded yes on the form and we did not tell you otherwise, you are welcome to attend.',
+            details: [
+              'We’ll also send out a reminder email to everyone.',
+              'Dress code is business casual.',
+              'Please feel free to take pictures during the ceremony.',
+              'The ceremony is usually about 12 to 15 minutes, followed by the signing of the register.',
+            ],
+          },
+          {
+            time: 'After the ceremony',
+            title: 'Group photos',
+            location: 'Around Toronto City Hall',
+            description:
+              'After the ceremony and register signing, we’ll spend a little time taking group photos before heading to the reception.',
+          },
+          {
+            time: '3:30 PM',
+            title: 'Reception opens',
+            location: '9th floor party room, 116 George St, Toronto, ON M5A 3S2',
+            description:
+              'Please do not arrive before 3:30 PM because we’ll still be on our way from City Hall.',
+            details: [
+              'The Thursday buzz-in instructions are just for the apartment.',
+              'For the reception, you should be able to find the party room on the 9th floor.',
+              'If you cannot find it, ask in the Discord server and we’ll attach the link.',
+            ],
+          },
+          {
+            time: '3:30 PM',
+            title: 'Snacks and drinks',
+            description:
+              'Snacks will be available right away, including a shrimp platter, charcuterie, stuffed croissants, and cake.',
+            details: [
+              'We’ll also have wine and other drinks available.',
+            ],
+          },
+          {
+            time: '5:00 PM',
+            title: 'Pizza',
+            description: 'Later in the afternoon, around 5:00 PM, we’ll order pizza from Domino’s.',
+          },
+          {
+            time: 'Evening',
+            title: 'Games, drinks, and hanging out',
+            description:
+              'We’re mainly hoping for a relaxed afternoon and evening where people can eat, hang out, play board games, and maybe do Jackbox.',
+            details: [
+              'Later in the day Amir will be bartending some cocktails.',
+              'People are welcome to head out whenever works for them.',
+            ],
+          },
+        ],
+      },
+    ],
+    logistics: [
+      {
+        title: 'City Hall',
+        details: [
+          'Address: 100 Queen St. W., Toronto, ON M5H 2N2.',
+          'Arrive by 2:15 PM for the 2:30 PM ceremony.',
+          'Use the East elevators. Elevators 1, 3, and 4 stop on the 3rd floor for the Wedding Chambers.',
+          'There is a paid parking lot nearby, which is how we’ll be getting there ourselves, though the subway is probably the easiest option.',
+        ],
+      },
+      {
+        title: '116 George St',
+        details: [
+          'Thursday board game night is in Unit N903. Buzz Max Odell or Evelyn Li on the intercom.',
+          'Friday reception is in the party room on the 9th floor.',
+          'Ask in Discord if you cannot find the party room.',
+        ],
+      },
+      {
+        title: 'Dress code',
+        details: [
+          'The ceremony dress code is business casual.',
+          'There is not a strict dress code for the reception, though something not too far from business casual makes the most sense.',
+        ],
+      },
+      {
+        title: 'Food and drinks',
+        details: [
+          'Snacks will be ready when the reception starts, including shrimp platter, charcuterie, stuffed croissants, and cake.',
+          'Pizza from Domino’s is planned around 5:00 PM.',
+          'We’ll have wine and other drinks, with cocktails from Amir later in the day.',
+        ],
+      },
+    ],
     ceremony: {
-      time: '2:30 PM',
+      time: 'Ceremony at 2:30 PM',
+      arrivalTime: 'Arrive by 2:15 PM',
       venue: 'Toronto City Hall',
-      address: '100 Queen St W, Toronto, ON',
+      address: '100 Queen St. W., Toronto, ON M5H 2N2',
+      locationDetails: 'Wedding Chambers, 3rd floor, East Tower',
     },
     reception: {
-      time: 'Starts 3:00 PM until late',
+      time: 'Starts around 3:30 PM',
       venue: '9th Floor Party Room',
-      address: '116 George St, Toronto, ON',
+      address: '116 George St, Toronto, ON M5A 3S2',
+      arrivalNote: 'Please do not arrive before 3:30 PM.',
     },
     parking: [
-      'Contact us for parking at our place or friends\' visitor parking',
+      'Paid parking is available near City Hall.',
+      'The subway is probably the easiest option for the ceremony.',
     ],
-    dressCode: 'Business casual',
-  },
+    dressCode: 'Ceremony business casual; reception close to business casual',
+  } satisfies ScheduleContent,
   faq: {
     eyebrow: 'FAQ',
     title: 'The details people usually ask us for',
@@ -54,11 +237,11 @@ export const content = {
     items: [
       {
         q: 'What time should I arrive for the ceremony?',
-        a: 'For the ceremony, please plan to arrive 15 to 20 minutes early so we can get settled before things begin.',
+        a: 'Please arrive at Toronto City Hall by 2:15 PM. The ceremony starts at 2:30 PM in the Wedding Chambers on the 3rd floor of the East Tower.',
       },
       {
         q: 'What time should I arrive for the reception?',
-        a: 'The reception informally starts at 3:00 PM, but feel free to come by whenever you can. We will be there to greet you!',
+        a: 'The reception starts around 3:30 PM in the 9th floor party room at 116 George St. Please do not arrive before then because we will still be coming from City Hall.',
       },
       {
         q: 'Do I need to attend?',
@@ -74,11 +257,11 @@ export const content = {
       },
       {
         q: 'Where should I park?',
-        a: 'Contact us for parking at our place or friends\' visitor parking. We can share more details on parking and transit options.',
+        a: 'For the ceremony, there is a paid parking lot near City Hall, though the subway is probably the easiest option. For the reception, there is parking in the building at 116 George St, but it is limited and we recommend arriving early if you are driving.',
       },
       {
         q: 'What should I wear?',
-        a: 'Business casual is perfect for both the ceremony and reception.',
+        a: 'The ceremony dress code is business casual. There is not a strict dress code for the reception, though something not too far from business casual makes the most sense.',
       },
       {
         q: 'How do I update my plans later?',

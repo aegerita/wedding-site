@@ -253,7 +253,8 @@ export function RsvpForm() {
               <div className='space-y-1'>
                 <p className='text-base leading-6 font-medium text-foreground'>City Hall ceremony</p>
                 <p className='text-sm text-muted-foreground'>
-                  {schedule.ceremony.time} · {schedule.ceremony.venue}
+                  {schedule.ceremony.arrivalTime}; {schedule.ceremony.time} ·{' '}
+                  {schedule.ceremony.venue}
                 </p>
                 <span className='text-sm text-destructive'>
                   {cityHallCeremonyClosed ? 'At capacity' : 'Limited capacity'}
@@ -281,6 +282,9 @@ export function RsvpForm() {
                 <p className='text-base leading-6 font-medium text-foreground'>Reception / party</p>
                 <p className='text-sm text-muted-foreground'>
                   {schedule.reception.time} · {schedule.reception.venue}
+                </p>
+                <p className='text-sm text-muted-foreground'>
+                  {schedule.reception.arrivalNote}
                 </p>
               </div>
             </div>
