@@ -189,7 +189,7 @@ export const content = {
       {
         title: '116 George St',
         details: [
-          'Buzz Max Odell or Evelyn Li on the intercom to get in.'
+          'Buzz Max Odell or Evelyn Li on the intercom to get in.',
           'Thursday board game night is in Unit N903.',
           'Friday reception is in the party room on the 9th floor.',
           'Ask in Discord if you cannot find the party room.',
