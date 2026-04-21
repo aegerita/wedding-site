@@ -46,7 +46,7 @@ export const content = {
       },
       {
         title: 'Friday ceremony',
-        description: 'Ceremony guests should arrive at City Hall by 2:15 PM. The ceremony starts at 2:30 PM.',
+        description: 'Ceremony guests should arrive at City Hall by 2:10 PM. The ceremony starts at 2:30 PM.',
       },
       {
         title: 'Friday reception',
@@ -106,11 +106,11 @@ export const content = {
         title: 'Wedding day',
         items: [
           {
-            time: '2:15 PM',
+            time: '2:10 PM',
             title: 'Arrive at Toronto City Hall',
             location: '100 Queen St. W., Toronto, ON M5H 2N2',
             description:
-              'Please arrive by 2:15 PM so everyone can get settled before the ceremony starts.',
+              'Please arrive by 2:10 PM so everyone can get settled before the ceremony starts.',
             details: [
               'The Wedding Chambers are on the 3rd floor in the East Tower.',
               'Enter City Hall through the wooden doors north of the Toronto sign, walk past the security desk, and follow the signs to the Wedding Chamber elevators.',
@@ -144,7 +144,7 @@ export const content = {
             description:
               'Please do not arrive before 3:30 PM because we’ll still be on our way from City Hall.',
             details: [
-              'The Thursday buzz-in instructions are just for the apartment.',
+              'Buzz Max Odell or Evelyn Li on the intercom.',
               'For the reception, you should be able to find the party room on the 9th floor.',
               'If you cannot find it, ask in the Discord server and we’ll attach the link.',
             ],
@@ -181,7 +181,7 @@ export const content = {
         title: 'City Hall',
         details: [
           'Address: 100 Queen St. W., Toronto, ON M5H 2N2.',
-          'Arrive by 2:15 PM for the 2:30 PM ceremony.',
+          'Arrive by 2:10 PM for the 2:30 PM ceremony.',
           'Use the East elevators. Elevators 1, 3, and 4 stop on the 3rd floor for the Wedding Chambers.',
           'There is a paid parking lot nearby, which is how we’ll be getting there ourselves, though the subway is probably the easiest option.',
         ],
@@ -189,7 +189,8 @@ export const content = {
       {
         title: '116 George St',
         details: [
-          'Thursday board game night is in Unit N903. Buzz Max Odell or Evelyn Li on the intercom.',
+          'Buzz Max Odell or Evelyn Li on the intercom to get in.'
+          'Thursday board game night is in Unit N903.',
           'Friday reception is in the party room on the 9th floor.',
           'Ask in Discord if you cannot find the party room.',
         ],
@@ -212,7 +213,7 @@ export const content = {
     ],
     ceremony: {
       time: 'Ceremony at 2:30 PM',
-      arrivalTime: 'Arrive by 2:15 PM',
+      arrivalTime: 'Arrive by 2:10 PM',
       venue: 'Toronto City Hall',
       address: '100 Queen St. W., Toronto, ON M5H 2N2',
       locationDetails: 'Wedding Chambers, 3rd floor, East Tower',
@@ -237,7 +238,7 @@ export const content = {
     items: [
       {
         q: 'What time should I arrive for the ceremony?',
-        a: 'Please arrive at Toronto City Hall by 2:15 PM. The ceremony starts at 2:30 PM in the Wedding Chambers on the 3rd floor of the East Tower.',
+        a: 'Please arrive at Toronto City Hall by 2:10 PM. The ceremony starts at 2:30 PM in the Wedding Chambers on the 3rd floor of the East Tower.',
       },
       {
         q: 'What time should I arrive for the reception?',
