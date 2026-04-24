@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint . --cache",
-    "lint:fix": "eslint . --fix --cache"
+    "lint:fix": "eslint . --fix --cache",
+    "email:guest-reminders": "node scripts/send-guest-reminders.mjs",
+    "email:guest-reminders:send": "node scripts/send-guest-reminders.mjs --send"
   },
   "dependencies": {
     "@phosphor-icons/react": "^2.1.10",
